@@ -1,8 +1,8 @@
 #!/bin/bash
 
-apt-get install software-properties-common
-apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.iweb.com/repo/10.5/ubuntu focal main'
+apt-get install apt-transport-https curl
+curl -o /etc/apt/trusted.gpg.d/mariadb_release_signing_key.asc 'https://mariadb.org/mariadb_release_signing_key.asc'
+sh -c "echo 'deb https://mirror.its.dal.ca/mariadb/repo/10.10/ubuntu bionic main' >>/etc/apt/sources.list"
 
 apt-get update
 
