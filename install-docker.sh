@@ -2,4 +2,4 @@
 
 apt-get update
 
-apt-get install docker.io docker-compose
+apt-get install docker.io docker-compose-v2
